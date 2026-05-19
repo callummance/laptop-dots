@@ -1,0 +1,179 @@
+@import "colours/mocha.css";
+
+/* --- Global Styles --- */
+* {
+  font-family: 'SF Pro Text', 'Inter', 'Segoe UI, NotoSans Nerd Font', sans-serif;
+  font-size: 12px;
+  min-height: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+/* --- Waybar Container --- */
+#waybar {
+  background: transparent;
+  padding: 0;
+}
+
+#waybar > box {
+  background-color: alpha(@base, 0.8);
+  border-radius: 0px 0px 8px 8px;
+  border-bottom: 1px solid @pink;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
+  margin: 0 0 6px 0;
+}
+
+/* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
+#workspaces {
+  /*background-color: #1a1b26;*/
+  padding: 0.2rem 0.5rem;
+  margin: 0px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
+  min-width: 0;
+  border: none;
+  /* Transition for background-color and color only */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#workspaces {
+  padding: 0px;
+  margin-left: 2px; /* Margin from the far left edge */
+  margin-right: 5px; /* Spacing after the workspaces module */
+}
+
+#workspaces button {
+  color: @text;
+  border-radius: 10px 10px 0 0; /* Workspaces buttons are always rounded */
+  padding: 0.2rem 0.0rem;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  outline: none;
+  min-width: 25px
+}
+
+#workspaces button.active {
+  color: @text;
+  font-weight: 800;
+  background-color: alpha(@pink, 0.3);
+  box-shadow: inset 0 0 0 1px alpha(@pink, 0.5);
+}
+
+#workspaces button:hover {
+  background: alpha(@flamingo, 0.3); /* Reference bright hover color */
+  color: @text;
+}
+
+/* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
+#window {
+  color: @text;
+  background: transparent;
+  font-weight: 800;
+}
+/* --- Right Modules (Single, Seamless Bar ) --- */
+#bluetooth,
+#pulseaudio,
+#backlight,
+#network,
+#custom-lock,
+#cpu,
+#memory,
+#battery {
+  background: transparent;
+  padding: 0.3rem 0.7rem;
+  margin: 0px 0px; 
+  border-radius: 6px;
+  box-shadow: none;
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#bluetooth:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#custom-lock:hover,
+#battery:hover,
+#memory:hover,
+#cpu:hover {
+  background-color: alpha(@flamingo, 0.3);
+}
+
+#clock {
+  color: @crust;
+  font-weight: 800;
+  background-color: alpha(@pink, 0.9);
+  padding: 0.0rem 0.3rem;
+  margin: 0px 0px;
+  border-radius: 6px 0 6px 6px; /* This module is always rounded */
+  min-width: 0;
+  border: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Simple Hover effect for clock module - BRIGHTER COLOR */
+#clock:hover {
+  background-color: @pink; /* Brighter highlight */
+}
+
+
+#cpu {
+  color: @text;
+}
+
+#memory {
+  color: @text;
+}
+
+#pulseaudio {
+  color: @text;
+}
+
+#backlight {
+  color: @text;
+}
+
+#network {
+  color: @text;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#bluetooth {
+  color: @overlay0;
+}
+#bluetooth.on {
+  color: @text;
+}
+#bluetooth.connected {
+  color: @blue;
+}
+#battery {
+  color: @text;
+}
+#battery.plugged{
+  color: @blue;
+}
+#battery.warning:not(.plugged) {
+  color: @red;
+}
+
+/* --- Tooltip Styles --- */
+tooltip {
+  background-color: @base;
+  margin: 5px 0px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 60px;
+}
+
+tooltip label {
+  color: @text;
+  border: 1px solid alpha(@pink, 0.1);
+  padding: 8px 8px;
+}
+
+

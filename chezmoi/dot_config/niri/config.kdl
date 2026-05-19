@@ -1,0 +1,16 @@
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://niri-wm.github.io/niri/Configuration:-Introduction
+
+include "inputs.kdl"
+include "displays.kdl"
+include "layout.kdl"
+include "autorun.kdl"
+include "keybinds.kdl"
+include "window-rules.kdl"
+
+// Theme
+include "themes/catppuccin-mocha-flamingo.kdl"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

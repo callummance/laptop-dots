@@ -1,0 +1,13 @@
+// This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waybar"
+
+spawn-at-startup "gammastep"
+
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/wallhaven-ml2pzm.jpg -m fill"
+
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+hotkey-overlay {
+    skip-at-startup
+}

@@ -1,0 +1,54 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=5000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/callum/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+
+############
+# KEYBINDS #
+############
+# Home/End keys
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Ctrl+arrow left/right to navigate by word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^H" backward-kill-word
+bindkey "^[[3;5~" kill-word
+
+# Fix delete key
+bindkey "^[[3~" delete-char
+
+###########
+# ALIASES #
+###########
+alias waybar-reload="pkill waybar; niri msg action spawn -- waybar"
+
+###########
+# PLUGINS #
+###########
+# Load Plugins
+eval "$(sheldon source)"
+
+# Autosuggest config
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Fuck
+eval $(thefuck --alias)
+
+
+
+##########
+# PROMPT #
+##########
+eval "$(starship init zsh)"
