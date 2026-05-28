@@ -24,10 +24,10 @@ input {
     touchpad {
         // off
         tap
-        // dwt
-        // dwtp
-        // drag false
-        // drag-lock
+        dwt
+        dwtp
+        drag true
+        drag-lock
         // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"

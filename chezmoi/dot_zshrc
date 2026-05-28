@@ -46,6 +46,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # Fuck
 eval $(thefuck --alias)
 
+# Zoxide
+eval "$(zoxide init zsh --cmd cd)"
+
 
 
 ##########
