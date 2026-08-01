@@ -20,6 +20,19 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"org.mozilla.firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"floorp$"# title="^Picture-in-Picture$"
+    match app-id=r#"one.ablaze.floorp$"# title="^Picture-in-Picture$"
+    default-column-width { fixed 500; }
+    focus-ring { 
+        off
+    }
+    border {
+        off
+    }
+    shadow {
+        off
+    }
     open-floating true
 }
 
